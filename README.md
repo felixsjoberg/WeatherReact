@@ -25,7 +25,17 @@ Install all the dependencies for the application.
 
 ## Information
 
+Inloggning sker med email och lösenord, vilket är taget från user API:et. 
+Email är detsamma som API:et, och pga lösenord saknas i API:et så är lösenordet deras "username", exempel på detta nedan.
+Användare med id 1-3 har jag kopplat till tre olika svensk städer (Stockholm, Göteborg, Malmö).
 
+Följande inloggningar fungerar och är ej case sensitive:
+Mail: Sincere@april.biz Lösenord: Bret
+Mail: Shanna@melissa.tv Lösenord: Antonette
+Mail: Nathan@yesenia.net Lösenord: Samantha
+
+308x270
+800x300
 ### Specifikation
 Vid arbetet med denna inlämningsuppgift skall du visa din kunskap kring att utveckla
 användargränssnitt i JavaScript med stöd av react.

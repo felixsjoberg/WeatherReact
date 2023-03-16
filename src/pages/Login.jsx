@@ -7,7 +7,6 @@ function Login({ authenticate }) {
     const [formData, setFormData] = useState(
         { email: "", password: "" }
     )
-    console.log(formData)
 
     //Handling state if I want to add real-time validation
     function handleChange(event) {

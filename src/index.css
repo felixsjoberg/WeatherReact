@@ -8,9 +8,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('./assets/cloudy.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 Form {
   background: linear-gradient(to bottom, hsl(209,52%,29%), hsl(211,71%,15%));
   width: 440px;
 }
+
