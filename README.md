@@ -5,6 +5,7 @@
 - [Commands](#Commands)
 - [Information](#Information)
 - [Specifikation](#Specifikation)
+- [Screenshot](#Screenshot)
 - [Verktyg](#Verktyg)
 - [Författare](#Författare)
 
@@ -29,13 +30,18 @@ Inloggning sker med email och lösenord, vilket är taget från user API:et.
 Email är detsamma som API:et, och pga lösenord saknas i API:et så är lösenordet deras "username", exempel på detta nedan.
 Användare med id 1-3 har jag kopplat till tre olika svensk städer (Stockholm, Göteborg, Malmö).
 
-Följande inloggningar fungerar och är ej case sensitive:
-Mail: Sincere@april.biz Lösenord: Bret
-Mail: Shanna@melissa.tv Lösenord: Antonette
-Mail: Nathan@yesenia.net Lösenord: Samantha
+Beroende på vilken användare som är inloggad skall väderprognos för dens användares staden vis i gränsnittet & en ikon som represeneterar väderförhållandet.
 
-308x270
-800x300
+**Följande inloggningar fungerar och är ej case sensitive:**
+**Mail & Lösenord**
+Sincere@april.biz - Bret
+Shanna@melissa.tv - Antonette
+Nathan@yesenia.net - Samantha
+
+### Screenshot
+
+![preview](/src/assets/preview.png)
+
 ### Specifikation
 Vid arbetet med denna inlämningsuppgift skall du visa din kunskap kring att utveckla
 användargränssnitt i JavaScript med stöd av react.
@@ -52,7 +58,7 @@ Då laddningstiden visas skall de vara möjligt för användare med id 1-3 att l
 temperaturen för ”rätt” stad skall visa i användargränssnittet. Användare med id större än 4, samt
 användare som saknas i API: et
 ( https://jsonplaceholder.typicode.com/users ) skall inte kunna loggian. Följande bibliotek skall
-användas i din lösning: Reakt, Reakt, Reakt Bootstrap och React Router.
+användas i din lösning: React, React Bootstrap och React Router.
 
 ### Verktyg
 - React & JavaScript

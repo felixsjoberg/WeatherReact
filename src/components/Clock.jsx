@@ -10,7 +10,7 @@ export default function Clock() {
 
     return (
         <div>
-            <p>{time.toLocaleTimeString()}</p>
+            <p className='fs-4'>{time.toLocaleTimeString()}</p>
         </div>
     );
 }
