@@ -4,8 +4,8 @@
 
 - [Commands](#Commands)
 - [Information](#Information)
-- [Specifikation](#Specifikation)
 - [Screenshot](#Screenshot)
+- [Specifikation](#Specifikation)
 - [Verktyg](#Verktyg)
 - [Författare](#Författare)
 
@@ -30,7 +30,7 @@ Inloggning sker med email och lösenord, vilket är taget från user API:et.
 Email är detsamma som API:et, och pga lösenord saknas i API:et så är lösenordet deras "username", exempel på detta nedan.
 Användare med id 1-3 har jag kopplat till tre olika svensk städer (Stockholm, Göteborg, Malmö).
 
-Beroende på vilken användare som är inloggad skall väderprognos för dens användares staden vis i gränsnittet & en ikon som represeneterar väderförhållandet.
+Beroende på vilken användare som är inloggad skall väderprognos för användarens stad visas i gränsnittet & en ikon som represeneterar väderförhållandet.
 
 **Följande inloggningar fungerar och är ej case sensitive:**
 **Mail & Lösenord**
@@ -54,7 +54,7 @@ Användare i systemet kan läsas från API: et som har url:n
 https://jsonplaceholder.typicode.com/users . Användare med id 1-3 är kopplad till tre olika svensk
 städer (Stockholm, Göteborg, Malmö).
 
-Då laddningstiden visas skall de vara möjligt för användare med id 1-3 att login och få upp
+Då landningssidan visas skall de vara möjligt för användare med id 1-3 att login och få upp
 temperaturen för ”rätt” stad skall visa i användargränssnittet. Användare med id större än 4, samt
 användare som saknas i API: et
 ( https://jsonplaceholder.typicode.com/users ) skall inte kunna loggian. Följande bibliotek skall

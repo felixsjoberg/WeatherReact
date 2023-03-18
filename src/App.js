@@ -68,7 +68,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard user={user} />} />
           </>
         )}
-
+        
         <Route path="*" element={<Navigate to={auth ? "/dashboard" : "/Login"} />} />
 
       </Routes>

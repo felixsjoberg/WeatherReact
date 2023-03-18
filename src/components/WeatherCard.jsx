@@ -3,33 +3,11 @@ import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import sunnyBg from '../assets/SunnyBg.webp';
 import Clock from './Clock';
-import sunny from '../assets/Sunny.svg';
-import cloudy from '../assets/Cloudy.svg';
-import rainy from '../assets/Rainy.svg';
-import snowy from '../assets/Snowy.svg';
-import mostlySunny from '../assets/MostlySunny.svg';
-export default function WeatherCard({ user, weatherData }) {
 
-
+export default function WeatherCard({ user, weatherData, weatherIcon }) {
 
   if (!weatherData) {
     return <Spinner animation="border" />;
-  }
-
-  function weatherIcon() {
-    const symbol = weatherData.weatherSymbol;
-    if (symbol >= 1 && symbol <= 4) {
-      return sunny;
-    } else if (symbol >= 5 && symbol <= 7) {
-      return mostlySunny;
-    } else if ((symbol >= 8 && symbol <= 14) || (symbol >= 18 && symbol <= 20)) {
-      return rainy;
-    } else if (symbol >= 14 && symbol <= 19) {
-      return cloudy;
-    }
-    else if (symbol >= 21 && symbol <= 27) {
-      return snowy;
-    }
   }
 
   return (
