@@ -16,9 +16,7 @@ function App() {
       .then(data => setAllUsers(data))
   }, [])
 
-
-
-  function authenticate(el) {
+  function Authenticate(el) {
 
     // Find user in the users array from the API if the username, email & id <= 3 match.
     const userExist = allUsers.find(
@@ -26,13 +24,14 @@ function App() {
         && user.email.toLowerCase() === el.email.toLowerCase()
         && user.id <= 3);
 
-    // Manipulate API object by adding city 
-    userExist !== undefined && AddUserCity(userExist);
-
-    userExist !== undefined ? setUser(userExist) : setUser(null)
-
-    setAuth(userExist !== undefined ? true : false)
-
+    if (userExist) {
+      AddUserCity(userExist); // Manipulate API object by adding city 
+      setUser(userExist);
+      setAuth(true);
+    } else {
+      setUser(null);
+      setAuth(false);
+    }
   }
 
   // Deklarera variabler för koordinater och städer
@@ -59,13 +58,13 @@ function App() {
         {!auth && (
           <Route
             path="/Login"
-            element={<Login authenticate={authenticate} />}
+            element={<Login authenticate={Authenticate} />}
           />
         )}
 
         {auth && (
           <>
-            <Route path="/dashboard" element={<Dashboard user={user} />} />
+            <Route path="/dashboard" element={<Dashboard user={user} setAuth={setAuth}  />} />
           </>
         )}
         

@@ -3,8 +3,10 @@ import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import sunnyBg from '../assets/SunnyBg.webp';
 import Clock from './Clock';
+import { getWeatherIcon } from '../utils/WeatherIcons';
 
-export default function WeatherCard({ user, weatherData, weatherIcon }) {
+
+export default function WeatherCard({ user, weatherData  }) {
 
   if (!weatherData) {
     return <Spinner animation="border" />;
@@ -19,7 +21,7 @@ export default function WeatherCard({ user, weatherData, weatherIcon }) {
             <Row className='mb-3'>
               <Col>
                 <Card.Text>
-                  <img className='fs-1 p-2 fw-bold col-sm-6' src={weatherIcon()} alt="" />
+                  <img className='fs-1 p-2 fw-bold col-sm-6' src={getWeatherIcon(weatherData.weatherSymbol)} alt="Weather Icon" />
                   <span className='fs-1 p-2 fw-bold col-sm-6'>{weatherData.temperature}°C</span>
                 </Card.Text>
               </Col>
