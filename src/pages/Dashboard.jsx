@@ -23,7 +23,8 @@ export default function Dashboard({ user, setAuth  }) {
         for (let i = 1; i <= 3; i++) {
           const item = data.timeSeries.find((item) => item.validTime.includes(currentDateTime(i).date));
           forecast.push({
-            ...item
+            ...item,
+            Day: currentDateTime(i).dayOfWeek
           });
         }
 
