@@ -6,11 +6,17 @@ export function currentDateTime(futureDays = 0) {
   const date = new Date();
   const day = date.getDate() + futureDays;
 
+
   const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let dayOfWeekName = daysOfWeek[date.getDay() + futureDays];
 
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
 
+  if (day > 0 && day < 10) {
+    return { date: `${year}-0${month}-0${day}T12`, dayOfWeek: dayOfWeekName };
+  } else if (day > 9 && day < 32) {
+    return { date: `${year}-0${month}-${day}T12`, dayOfWeek: dayOfWeekName };
+  }
   return { date: `${year}-0${month}-${day}T12`, dayOfWeek: dayOfWeekName };
 }
